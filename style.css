@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+header{
+    background-image: url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header-container{
+    width: 35%;
+    margin-left: 10rem;
+    color: #DCDCDC;
+}
+
+.header__p{
+    font-size: 1.5rem;
+}
+
+.brand-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.brand__image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 35rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.brand--maap{
+    background-image: url("images/maap\ jersey.jpg");
+}
+
+.brand--pns{
+    background-image: url("images/pns.jpg");
+}
+
+.brand--assos{
+    background-image: url("images/assos.jpg");
+}
+
+.brand__p{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
