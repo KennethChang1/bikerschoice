@@ -86,9 +86,9 @@ h2{
     background-image: url("images/assos.jpg");
 }
 
-.brand__p{
+.btn--brand{
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -104,3 +104,4 @@ h2{
     margin: auto;
     line-height: 1.5rem;
 }
+
