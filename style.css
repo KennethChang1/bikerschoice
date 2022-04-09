@@ -60,8 +60,18 @@ h2{
 .btn{
     border: 1px solid white;
     color: white;
-    padding: 1rem 3rem;
+    padding: 0.5rem 3rem;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: 	#C8C8C8;
+    color: black;
+}
+
+.btn--col{
+    font-size: 1.2rem;
 }
 
 .brand--maap{
