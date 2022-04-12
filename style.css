@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    background-image: linear-gradient(#e5e5e5, white);
+}
+
 header{
     background-image: url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
     background-size: cover;
@@ -27,6 +31,7 @@ h2{
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .header-container{
@@ -39,6 +44,11 @@ h2{
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.3rem;
     margin-bottom: 2rem;
+}
+
+.brand{
+    display: none;
+    margin: 3rem;
 }
 
 .brand-container{
@@ -93,7 +103,6 @@ h2{
 
 .about{
     font-family: 'Ubuntu', sans-serif;
-    background-image: linear-gradient(#e5e5e5, white);;
     text-align: center;
     padding: 6rem 0;
 }
@@ -104,3 +113,21 @@ h2{
     line-height: 1.5rem;
 }
 
+@media (max-width:600px){
+    .header-container{
+        margin: auto;
+        width: 20rem;
+    }
+
+    .brand{
+        display: block;
+    }
+
+    .brand-container{
+        display: block;
+    }
+
+    .about__p{
+        width: 80%;
+    }
+}
