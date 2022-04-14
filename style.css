@@ -53,7 +53,7 @@ h2{
 
 .brand-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .brand__image{
@@ -94,6 +94,10 @@ h2{
 
 .brand--assos{
     background-image: url("images/assos.jpg");
+}
+
+.brand--magped{
+    background-image: url("images/magped.jpg");
 }
 
 .btn--brand{
