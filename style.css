@@ -14,8 +14,6 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
 h1{
@@ -34,16 +32,22 @@ h2{
     text-align: center;
 }
 
+nav{
+    height: 15rem;
+}
+
 .logo{
-    position:absolute;
+    position: relative;
+    display: block;
+    margin: auto;
     width: 20rem;
     top: -7rem;
-    left: 39%;
 }
+
 
 .header-container{
     width: 35%;
-    margin-left: 10rem;
+    margin-left: 10%;
     color: #DCDCDC;
 }
 
@@ -125,10 +129,6 @@ h2{
 }
 
 @media (max-width:600px){
-    .logo{
-        top: -5rem;
-        left: unset;
-    }
 
     .header-container{
         margin: auto;
