@@ -1,155 +1,53 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-image: linear-gradient(#e5e5e5, white);
-}
-
-header{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
-    background-size: cover;
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
 }
 
-h1{
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.nav {
+    background-color: white;
+    height: 4em;
+    padding: 1em;
 }
 
-h2{
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-nav{
-    height: 15rem;
-}
-
-.logo{
-    position: relative;
-    display: block;
+.logo {
+    position: absolute;
+    width: 100px;
+    top: -1.4em;
+    left: 0;
+    right: 0;
     margin: auto;
-    width: 20rem;
-    top: -7rem;
 }
 
-
-.header-container{
-    width: 35%;
-    margin-left: 10%;
-    color: #DCDCDC;
+.hidden{
+    overflow: hidden; 
+    height: 0;
+    opacity: 0;
 }
 
-.header__p{
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 1.3rem;
-    margin-bottom: 2rem;
-}
-
-.brand{
-    display: none;
-    margin: 3rem;
-}
-
-.brand-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.brand__image{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 35rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.btn{
-    font-family: 'Orbitron', sans-serif;
-    border: 1px solid white;
-    color: white;
-    padding: 0.5rem 3rem;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    background-color: 	#C8C8C8;
-    color: black;
-}
-
-.btn--col{
+.nav__links{
+    font-family: acumin-pro, sans-serif;
+    background-color: white;
     font-size: 1.2rem;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
-.brand--maap{
-    background-image: url("images/maap\ jersey.jpg");
+.nav__links>ul{
+    position: relative;
+    list-style: none;
+    padding: 1em;
 }
 
-.brand--pns{
-    background-image: url("images/pns.jpg");
-}
-
-.brand--assos{
-    background-image: url("images/assos.jpg");
-}
-
-.brand--magped{
-    background-image: url("images/magped.jpg");
-}
-
-.btn--brand{
-    color: white;
-    margin-bottom: 20px;
-}
-
-.about{
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    padding: 6rem 0;
-}
-
-.about__p{
-    width: 50%;
-    margin: auto;
-    line-height: 1.5rem;
-}
-
-@media (max-width:600px){
-
-    .header-container{
-        margin: auto;
-        width: 20rem;
-    }
-
-    .brand{
-        display: block;
-    }
-
-    .brand-container{
-        display: block;
-    }
-
-    .about__p{
-        width: 80%;
-    }
-
-    .btn:hover{
-        background-color: unset;
-        color: white;
-    }
-    
+.nav__links li::after{
+    content: url("images/icons8-expand-arrow-24.png");
+    position: absolute;
+    right: 5%;
 }
