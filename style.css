@@ -27,7 +27,7 @@ header {
     margin: auto;
 }
 
-.nav__links.active{
+.nav__links.active, .nav--brand.active{
     overflow: visible;
     max-height: 1000px;
     opacity: 1;
@@ -46,6 +46,9 @@ header {
 .nav__ul{
     position: relative;
     list-style: none;
+}
+
+.nav--main{
     padding: 1em;
 }
 
@@ -58,4 +61,13 @@ header {
     content: url("images/icons8-expand-arrow-24.png");
     position: absolute;
     right: 5%;
+}
+
+.nav--brand{
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    font-size: 1rem;
+    padding-left: 1em;
+    list-style: none;
 }
