@@ -5,11 +5,18 @@
 }
 
 header {
+    font-family: acumin-pro, sans-serif;
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 80vh;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
 }
 
 .nav {
@@ -35,12 +42,13 @@ header {
 }
 
 .nav__links{
+    position: relative;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    font-family: acumin-pro, sans-serif;
     background-color: white;
     font-size: 1.2rem;
+    z-index: 1;
 }
 
 .nav__ul{
@@ -50,11 +58,6 @@ header {
 
 .nav--main{
     padding: 1em;
-}
-
-.nav__li>a{
-    text-decoration: none;
-    color: black;
 }
 
 .nav__li::after{
@@ -70,4 +73,27 @@ header {
     font-size: 1rem;
     padding-left: 1em;
     list-style: none;
+}
+
+.nav__sub{
+    text-decoration: none;
+    color: black;
+}
+
+.header-container{
+    position: absolute;
+    color: white;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 3em;
+}
+
+.header-container *{
+    margin-bottom: .5rem;
+}
+
+.btn{
+    color: white;
 }

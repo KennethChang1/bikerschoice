@@ -1,12 +1,21 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav__links');
-const navLinks = document.querySelector('.nav__li');
-const brands = document.querySelector('.nav--brand');
+const navLinks = document.querySelectorAll('.nav__li');
+const brands = document.querySelectorAll('.nav--brand');
 
-hamburger.addEventListener('click', ()=>{
+hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
+    close();
 })
 
-navLinks.addEventListener('click', ()=>{
-    brands.classList.toggle('active');
-})
+navLinks.forEach((element, index) => {
+    navLinks[index].addEventListener('click', () => {
+        brands[index].classList.toggle('active');
+    });
+});
+
+function close(){
+    brands.forEach((element, index) => {
+        brands[index].classList.remove('active');
+    });
+}
