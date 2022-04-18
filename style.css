@@ -1,5 +1,9 @@
 :root {
+    --header-font-family: 'Tenor Sans', sans-serif;
     --text-font-family: acumin-pro, sans-serif;
+    --bg-repeat: no-repeat;
+    --bg-image-size: cover;
+    --bg-image-pos: center;
 }
 
 
@@ -22,15 +26,24 @@ nav {
 header {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: var(--bg-repeat);
+    background-size: var(--bg-image-size);
+    background-position: var(--bg-image-pos);
     height: 80vh;
 }
 
 h1 {
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: var(--header-font-family);
     font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--header-font-family);
+    margin-bottom: 1em;
+}
+
+h5{
+    font-family: var(--header-font-family);
 }
 
 .nav {
@@ -110,32 +123,73 @@ h1 {
 }
 
 .btn {
-    display: block;
     color: white;
     margin-bottom: .5em;
 }
 
-.grid__image {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+.grid{
+    margin-bottom: 3em;
 }
 
-.grid__image--man {
+.grid__image {
+    position: relative;
+    background-repeat: var(--bg-repeat);
+    background-size: var(--bg-image-size);
+    background-position: var(--bg-image-pos);
+    height: 70vh;
+}
+
+.grid__image--pedla {
     background-image: url("images/MM_MENSG_CONTENT1_640x.webp");
 }
 
-.grid__image--woman {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/20210923-PNS_WEBSHOP_400-four-five.jpeg");
+.grid__image--maap{
+    background-image: url("images/maap\ jersey.jpg");
 }
 
-.btn--big {
+.grid__image--pns{
+    background-image: url("images/pns.jpg");
+}
+
+.grid__image--assos{
+    background-image: url("images/assos.jpg");
+}
+
+.btn--brand {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: auto;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: .5em;
     font-size: 2rem;
     text-align: center;
 }
+
+/* featured products css */
+
+.featured{
+    padding-left: 2em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: scroll;
+}
+
+.card{
+    margin-right: 1em;
+}
+
+.card__image{
+    width: 160px;
+}
+
+.card__desc{
+    font-size: .9rem;
+}
+
+
