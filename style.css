@@ -13,6 +13,12 @@ body{
     font-family: var(--text-font-family);
 }
 
+nav{
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+
 header {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
