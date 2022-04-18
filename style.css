@@ -1,11 +1,19 @@
+:root{
+    --text-font-family: acumin-pro, sans-serif;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body{
+    font-family: var(--text-font-family);
+}
+
 header {
-    font-family: acumin-pro, sans-serif;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/luca-j-jFz3oTdQN8E-unsplash.jpg");
     background-repeat: no-repeat;
@@ -15,7 +23,7 @@ header {
 }
 
 h1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Tenor Sans', sans-serif;
     font-size: 2.5rem;
 }
 
@@ -95,5 +103,32 @@ h1{
 }
 
 .btn{
+    display: block;
     color: white;
+    margin-bottom: .5em;
+}
+
+.grid__image{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.grid__image--man{
+    background-image: url("images/MM_MENSG_CONTENT1_640x.webp");
+}
+
+.grid__image--woman{
+    background-image: url("images/20210923-PNS_WEBSHOP_400-four-five.jpeg");
+}
+
+.btn--big{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 2rem;
+    text-align: center;
 }
