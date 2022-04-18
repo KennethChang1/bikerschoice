@@ -1,4 +1,4 @@
-:root{
+:root {
     --text-font-family: acumin-pro, sans-serif;
 }
 
@@ -9,11 +9,11 @@
     padding: 0;
 }
 
-body{
+body {
     font-family: var(--text-font-family);
 }
 
-nav{
+nav {
     position: fixed;
     width: 100vw;
     z-index: 1;
@@ -28,7 +28,7 @@ header {
     height: 80vh;
 }
 
-h1{
+h1 {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 2.5rem;
 }
@@ -48,14 +48,15 @@ h1{
     margin: auto;
 }
 
-.nav__links.active, .nav--brand.active{
+.nav__links.active,
+.nav--brand.active {
     overflow: visible;
     max-height: 1000px;
     opacity: 1;
     transition: max-height 1s ease-in-out, opacity 1s linear;
 }
 
-.nav__links{
+.nav__links {
     position: relative;
     overflow: hidden;
     max-height: 0;
@@ -65,22 +66,22 @@ h1{
     z-index: 1;
 }
 
-.nav__ul{
+.nav__ul {
     position: relative;
     list-style: none;
 }
 
-.nav--main{
+.nav--main {
     padding: 1em;
 }
 
-.nav__li::after{
+.nav__li::after {
     content: url("images/icons8-expand-arrow-24.png");
     position: absolute;
     right: 5%;
 }
 
-.nav--brand{
+.nav--brand {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
@@ -89,12 +90,12 @@ h1{
     list-style: none;
 }
 
-.nav__sub{
+.nav__sub {
     text-decoration: none;
     color: black;
 }
 
-.header-container{
+.header-container {
     position: absolute;
     color: white;
     width: 80%;
@@ -104,17 +105,17 @@ h1{
     bottom: 3em;
 }
 
-.header-container *{
+.header-container * {
     margin-bottom: .5rem;
 }
 
-.btn{
+.btn {
     display: block;
     color: white;
     margin-bottom: .5em;
 }
 
-.grid__image{
+.grid__image {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,15 +123,15 @@ h1{
     height: 80vh;
 }
 
-.grid__image--man{
+.grid__image--man {
     background-image: url("images/MM_MENSG_CONTENT1_640x.webp");
 }
 
-.grid__image--woman{
-    background-image: url("images/20210923-PNS_WEBSHOP_400-four-five.jpeg");
+.grid__image--woman {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/20210923-PNS_WEBSHOP_400-four-five.jpeg");
 }
 
-.btn--big{
+.btn--big {
     position: absolute;
     left: 0;
     right: 0;
