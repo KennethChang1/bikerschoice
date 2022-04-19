@@ -5,6 +5,7 @@
     --bg-image-size: cover;
     --bg-image-pos: center;
     --navLink-font-color: black;
+    --global-padding-left: 2em;
 }
 
 
@@ -184,7 +185,7 @@ h5{
 /* featured products css */
 
 .product{
-    padding-left: 2em;
+    padding-left: var(--global-padding-left);
     margin-bottom: 2em;
 }
 
