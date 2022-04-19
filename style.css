@@ -170,8 +170,9 @@ h5{
 
 /* featured products css */
 
-.featured{
+.product{
     padding-left: 2em;
+    margin-bottom: 2em;
 }
 
 .container{
@@ -186,6 +187,7 @@ h5{
 
 .card__image{
     width: 160px;
+    height: 200px;
 }
 
 .card__desc{
