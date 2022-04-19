@@ -4,6 +4,7 @@
     --bg-repeat: no-repeat;
     --bg-image-size: cover;
     --bg-image-pos: center;
+    --navLink-font-color: black;
 }
 
 
@@ -66,7 +67,7 @@ h5{
     overflow: visible;
     max-height: 1000px;
     opacity: 1;
-    transition: max-height 1s ease-in-out, opacity 1s linear;
+    transition: max-height 1s ease-in-out;
 }
 
 .nav__links {
@@ -88,10 +89,22 @@ h5{
     padding: 1em;
 }
 
-.nav__li::after {
+.nav__li{
+    opacity: 0;
+    text-decoration: none;
+    color: var(--navLink-font-color);
+}
+
+.nav--arrow::after{
     content: url("images/icons8-expand-arrow-24.png");
     position: absolute;
     right: 5%;
+}
+
+@keyframes link{
+    to{
+        opacity: 1;
+    }
 }
 
 .nav--brand {
