@@ -1,0 +1,245 @@
+@import './normalize';
+@import './config';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $header-font-family;
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+
+header{
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
+    @include bg-settings;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+h3{
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+}
+
+.section__title{
+    font-family: var(--header-font-family);
+}
+
+.nav {
+    background-color: white;
+    height: 4em;
+    padding: 1em;
+
+    &__links.active, &--brand.active{
+        overflow: visible;
+        max-height: 1000px;
+        opacity: 1;
+        transition: max-height 1s ease-in-out;
+    }
+
+    &__links{
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        background-color: white;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+
+    &__ul{
+        position: relative;
+        list-style: none;
+    }
+
+    &--main{
+        padding: 1em;
+    }
+
+    &__li{
+        opacity: 0;
+        text-decoration: none;
+        color: black;
+    }
+
+    &--arrow::after{
+        content: url("../images/icons8-expand-arrow-24.png");
+        position: absolute;
+        right: 5%;
+    }
+
+    @keyframes link{
+        to{
+            opacity: 1;
+        }
+    }
+
+    &--brand{
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        font-size: 1rem;
+        padding-left: 1em;
+        list-style: none;
+    }
+
+    &__sub{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.header-container{
+    position: absolute;
+    color: white;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 3em;
+
+    *{
+        margin-bottom: .5rem;
+    }
+}
+
+.btn{
+    color: white;
+    margin-bottom: .5em;
+}
+
+.logo{
+    position: absolute;
+    width: 100px;
+    top: -1.4em;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section--brand{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}
+
+.grid__image {
+    position: relative;
+    @include bg-settings;
+
+    &--pedla {
+        background-image: url("../images/MM_MENSG_CONTENT1_640x.webp");
+    }
+    
+    &--maap{
+        background-image: url("../images/maap\ jersey.jpg");
+    }
+    
+    &--pns{
+        background-image: url("../images/pns.jpg");
+    }
+    
+    &--assos{
+        background-image: url("../images/assos.jpg");
+    }
+}
+
+.btn--brand {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .5em;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.section--product{
+    padding-left: 1em;
+    margin-bottom: 2em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: scroll;
+}
+
+.card{
+    margin-right: 1em;
+}
+
+.card__image{
+    width: 160px;
+    height: 200px;
+}
+
+.card__desc{
+    font-size: .9rem;
+}
+
+/* location css */
+
+.section--location{
+    text-align: center;
+}
+
+.location__image{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.section__header{
+    font-size: 2rem;
+    margin: 1em 0;
+}
+
+.section__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section--location{
+    margin-bottom: 2em;
+}
+
+.section__subtitle{
+    padding: 0 1em;
+}
+
+.footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 15em;
+
+    &__logo{
+        width: 130px;
+    }
+
+    &__desc{
+        font-size: 1.2rem;
+        margin-bottom: .5em;
+    }
+
+    &__social{
+        width: 24px;
+    }
+}
