@@ -9,6 +9,11 @@ body{
     font-family: $text-font-family;
 }
 
+.no-scroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
 .header{
     &__nav{
         padding: 25px 18px;

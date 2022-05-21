@@ -82,6 +82,11 @@ body {
   font-family: "Tenor Sans", sans-serif;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .header__nav {
   padding: 25px 18px;
 }
