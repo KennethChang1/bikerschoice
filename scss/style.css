@@ -1,218 +1,45 @@
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden], template {
-  display: none;
-}
-
-html {
-  background: #fff;
-  color: #000;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-html,
-button,
-input,
-select,
-textarea {
-  font-family: sans-serif;
-}
-
 body {
-  margin: 0;
+  line-height: 1;
 }
 
-a {
-  background: transparent;
+ol, ul {
+  list-style: none;
 }
 
-a:focus {
-  outline: thin dotted;
+blockquote, q {
+  quotes: none;
 }
 
-a:hover, a:active {
-  outline: 0;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
+blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-figure {
-  margin: 0;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-  white-space: normal;
-}
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-  vertical-align: baseline;
-}
-
-button, input {
-  line-height: normal;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-button[disabled],
-input[disabled] {
-  cursor: default;
-}
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-textarea {
-  overflow: auto;
-  vertical-align: top;
 }
 
 table {
@@ -220,162 +47,55 @@ table {
   border-spacing: 0;
 }
 
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.text-white {
+  color: white;
+}
+
+.fs-big {
+  font-size: 32px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-maap {
+  background-image: url("../images/maap jersey.jpg");
 }
 
 body {
   font-family: "Tenor Sans", sans-serif;
 }
 
-nav {
-  position: fixed;
-  width: 100vw;
-  z-index: 1;
+.header__nav {
+  padding: 25px 18px;
 }
 
-header {
-  position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1em;
-}
-
-.section__title {
-  font-family: var(--header-font-family);
-}
-
-.nav {
-  background-color: white;
-  height: 4em;
-  padding: 1em;
-}
-
-.nav__links.active, .nav--brand.active {
-  overflow: visible;
-  max-height: 1000px;
-  opacity: 1;
-  -webkit-transition: max-height 1s ease-in-out;
-  transition: max-height 1s ease-in-out;
-}
-
-.nav__links {
-  position: relative;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  background-color: white;
-  font-size: 1.2rem;
-  z-index: 1;
-}
-
-.nav__ul {
-  position: relative;
-  list-style: none;
-}
-
-.nav--main {
-  padding: 1em;
-}
-
-.nav__li {
-  opacity: 0;
-  text-decoration: none;
-  color: black;
-}
-
-.nav--arrow::after {
-  content: url("../images/icons8-expand-arrow-24.png");
+.header__logo {
   position: absolute;
-  right: 5%;
-}
-
-@-webkit-keyframes link {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes link {
-  to {
-    opacity: 1;
-  }
-}
-
-.nav--brand {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  font-size: 1rem;
-  padding-left: 1em;
-  list-style: none;
-}
-
-.nav__sub {
-  text-decoration: none;
-  color: black;
-}
-
-.header-container {
-  position: absolute;
-  color: white;
-  width: 80%;
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 3em;
+  width: 7em;
 }
 
-.header-container * {
-  margin-bottom: .5rem;
-}
-
-.btn {
-  color: white;
-  margin-bottom: .5em;
-}
-
-.logo {
-  position: absolute;
-  width: 100px;
-  top: -1.4em;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.section--brand {
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,51 +103,66 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 3em;
-}
-
-.grid__image {
-  position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-image: url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 80vh;
+  padding: 35px;
 }
 
-.grid__image--pedla {
-  background-image: url("../images/MM_MENSG_CONTENT1_640x.webp");
+.header__title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.grid__image--maap {
-  background-image: url("../images/maap jersey.jpg");
+.header__copy {
+  margin-bottom: 10px;
 }
 
-.grid__image--pns {
-  background-image: url("../images/pns.jpg");
-}
-
-.grid__image--assos {
-  background-image: url("../images/assos.jpg");
-}
-
-.btn--brand {
-  text-decoration: none;
-  border-bottom: 1px solid white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
+.nav-links {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: .5em;
-  font-size: 2rem;
-  text-align: center;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  top: 0;
+  background-color: white;
+  width: 90%;
+  height: 100%;
+  padding-top: 2em;
+  padding-left: 18px;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
-.section--product {
-  padding-left: 1em;
-  margin-bottom: 2em;
+.nav-links-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav-link {
+  margin: 5em 0;
+}
+
+.section--featured {
+  padding: 25px;
+}
+
+.section__card {
+  background-image: url("../images/PN_Mens-TKO-Jersey-White-Retail_Front-product-card.jpeg");
+  height: 20em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-section {
+  padding: 1em;
 }
 
 .container {
@@ -435,70 +170,69 @@ h3 {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  overflow: scroll;
+  overflow: auto;
+}
+
+.card-image {
+  width: 160px;
+  height: 200px;
 }
 
 .card {
   margin-right: 1em;
 }
 
-.card__image {
-  width: 160px;
-  height: 200px;
+.product-title {
+  margin-bottom: 10px;
+  font-size: 25px;
 }
 
-.card__desc {
-  font-size: .9rem;
+.product-container {
+  margin-bottom: 40px;
 }
 
-/* location css */
-.section--location {
+/* brand */
+.brand-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 35px;
+}
+
+.bg-maap {
+  background-image: url("../images/maap jersey.jpg");
+}
+
+.bg-pns {
+  background-image: url("../images/pns.jpg");
+}
+
+.bg-pedla {
+  background-image: url("../images/MM_MENSG_CONTENT1_640x.webp");
+}
+
+.bg-assos {
+  background-image: url("../images/assos.jpg");
+}
+
+.brand-title {
+  display: block;
   text-align: center;
 }
 
-.location__image {
-  width: 100%;
-  height: 50vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.section__header {
-  font-size: 2rem;
-  margin: 1em 0;
-}
-
-.section__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.section--location {
-  margin-bottom: 2em;
-}
-
-.section__subtitle {
-  width: 20em;
-  margin: auto;
-}
-
-.footer {
-  background-color: black;
+.brand__header {
   text-align: center;
-  color: white;
-  height: 15em;
-}
-
-.footer__logo {
-  width: 130px;
-}
-
-.footer__desc {
-  font-size: 1.2rem;
-  margin-bottom: .5em;
-}
-
-.footer__social {
-  width: 24px;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 /*# sourceMappingURL=style.css.map */

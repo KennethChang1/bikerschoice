@@ -1,246 +1,155 @@
-@import './normalize';
-@import './config';
+@import './reset';
+@import './component';
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
+$header-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$text-font-family: 'Tenor Sans', sans-serif;
 
 body{
-    font-family: $header-font-family;
+    font-family: $text-font-family;
 }
 
-nav{
-    position: fixed;
-    width: 100vw;
-    z-index: 1;
-}
-
-header{
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
-    @include bg-settings;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-
-h3{
-    font-size: 1.3rem;
-    margin-bottom: 1em;
-}
-
-.section__title{
-    font-family: var(--header-font-family);
-}
-
-.nav {
-    background-color: white;
-    height: 4em;
-    padding: 1em;
-
-    &__links.active, &--brand.active{
-        overflow: visible;
-        max-height: 1000px;
-        opacity: 1;
-        transition: max-height 1s ease-in-out;
+.header{
+    &__nav{
+        padding: 25px 18px;
     }
 
-    &__links{
-        position: relative;
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        background-color: white;
-        font-size: 1.2rem;
-        z-index: 1;
-    }
-
-    &__ul{
-        position: relative;
-        list-style: none;
-    }
-
-    &--main{
-        padding: 1em;
-    }
-
-    &__li{
-        opacity: 0;
-        text-decoration: none;
-        color: black;
-    }
-
-    &--arrow::after{
-        content: url("../images/icons8-expand-arrow-24.png");
+    &__logo{
         position: absolute;
-        right: 5%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 7em;
     }
 
-    @keyframes link{
-        to{
-            opacity: 1;
-        }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url('../images/luca-j-jFz3oTdQN8E-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        padding: 35px;
     }
 
-    &--brand{
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        font-size: 1rem;
-        padding-left: 1em;
-        list-style: none;
+    &__title{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
     }
 
-    &__sub{
-        text-decoration: none;
-        color: black;
+    &__copy{
+        margin-bottom: 10px;
     }
 }
 
-.header-container{
+.nav-links{
     position: absolute;
-    color: white;
-    width: 80%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: 3em;
+    transform: translateX(-100%);
+    top: 0;
+    background-color: white;
+    width: 90%;
+    height: 100%;
+    padding-top: 2em;
+    padding-left: 18px;
+    transition: transform 0.3s ease-in;
+}
 
-    *{
-        margin-bottom: .5rem;
+.nav-links-active{
+    transform: translateX(0);
+}
+
+.nav-link{
+    margin: 5em 0;
+}
+
+.section{
+    &--featured{
+        padding: 25px;
     }
-}
 
-.btn{
-    color: white;
-    margin-bottom: .5em;
-}
-
-.logo{
-    position: absolute;
-    width: 100px;
-    top: -1.4em;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.section--brand{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3em;
-}
-
-.grid__image {
-    position: relative;
-    @include bg-settings;
-
-    &--pedla {
-        background-image: url("../images/MM_MENSG_CONTENT1_640x.webp");
+    &__card{
+        background-image: url('../images/PN_Mens-TKO-Jersey-White-Retail_Front-product-card.jpeg');
+        height: 20em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-    
-    &--maap{
-        background-image: url("../images/maap\ jersey.jpg");
-    }
-    
-    &--pns{
-        background-image: url("../images/pns.jpg");
-    }
-    
-    &--assos{
-        background-image: url("../images/assos.jpg");
-    }
+
+    // &--maap{
+    //     background-image: url('../images/maap\ jersey.jpg');
+    //     height: 25em;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     background-position: center;
+    // }
 }
 
-.btn--brand {
-    text-decoration: none;
-    border-bottom: 1px solid white;
-    width: fit-content;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: .5em;
-    font-size: 2rem;
-    text-align: center;
-}
-
-
-.section--product{
-    padding-left: 1em;
-    margin-bottom: 2em;
+.product-section{
+    padding: 1em;
 }
 
 .container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    overflow: scroll;
+    overflow: auto;
+}
+
+.card-image{
+    width: 160px;
+    height: 200px;
 }
 
 .card{
     margin-right: 1em;
 }
 
-.card__image{
-    width: 160px;
-    height: 200px;
+.product-title{
+    margin-bottom: 10px;
+    font-size: 25px;
 }
 
-.card__desc{
-    font-size: .9rem;
+.product-container{
+    margin-bottom: 40px;
 }
 
-/* location css */
+/* brand */
+.brand-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 35px;
+}
 
-.section--location{
+.bg-maap{
+    background-image: url('../images/maap\ jersey.jpg');
+}
+
+.bg-pns{
+    background-image: url('../images/pns.jpg');
+}
+
+.bg-pedla{
+    background-image: url('../images/MM_MENSG_CONTENT1_640x.webp');
+}
+
+.bg-assos{
+    background-image: url('../images/assos.jpg');
+}
+
+.brand-title{
+    display: block;
     text-align: center;
 }
 
-.location__image{
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
-
-.section__header{
-    font-size: 2rem;
-    margin: 1em 0;
-}
-
-.section__title{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.section--location{
-    margin-bottom: 2em;
-}
-
-.section__subtitle{
-    width: 20em;
-    margin: auto;
-}
-
-.footer{
-    background-color: black;
+.brand__header{
     text-align: center;
-    color: white;
-    height: 15em;
-
-    &__logo{
-        width: 130px;
-    }
-
-    &__desc{
-        font-size: 1.2rem;
-        margin-bottom: .5em;
-    }
-
-    &__social{
-        width: 24px;
-    }
+    font-size: 2em;
+    margin-bottom: 1em;
 }
