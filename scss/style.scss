@@ -4,6 +4,7 @@
 
 $header-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $text-font-family: 'Tenor Sans', sans-serif;
+$dim-bg-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) );
 
 body{
     font-family: $text-font-family;
@@ -41,13 +42,19 @@ body{
     }
 
     &__title{
-        font-size: 3rem;
+        font-size: 2.5rem;
+        letter-spacing: .1em;
         font-weight: 600;
         margin-bottom: 10px;
     }
 
     &__copy{
         margin-bottom: 10px;
+    }
+
+    &__link{
+        border-bottom: 1px solid white;
+        width: fit-content;
     }
 }
 
@@ -139,19 +146,19 @@ body{
 }
 
 .bg-maap{
-    background-image: url('../images/maap\ jersey.jpg');
+    background-image: $dim-bg-image, url('../images/maap\ jersey.jpg');
 }
 
 .bg-pns{
-    background-image: url('../images/pns.jpg');
+    background-image: $dim-bg-image, url('../images/pns.jpg');
 }
 
 .bg-pedla{
-    background-image: url('../images/MM_MENSG_CONTENT1_640x.webp');
+    background-image: $dim-bg-image, url('../images/MM_MENSG_CONTENT1_640x.webp');
 }
 
 .bg-assos{
-    background-image: url('../images/assos.jpg');
+    background-image: $dim-bg-image, url('../images/assos.jpg');
 }
 
 .brand-title{
@@ -208,6 +215,10 @@ body{
     margin: auto;
 }
 
+.header-title--location{
+    margin-top: 1em;
+}
+
 .location-image{
     width: 100%;
     height: 250px;
@@ -242,5 +253,61 @@ body{
         width: fit-content;
         margin: auto;
         text-align: center;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .nav-links{
+        width: 30%;
+    }
+
+    .product-title{
+        text-align: center;
+        margin: 2em 0 3em;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 5em;
+        padding-right: 4em;
+    }
+
+    .card-image{
+        width: 100%;
+        height: 350px;
+    }
+
+    .brand-section-wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .article-image{
+        height: 15em;
+    }
+
+    .article-list-wrapper{
+        padding: 0 5em;
+    }
+
+    .location{
+        margin-bottom: 5em;
+    }
+
+    .location-wrapper{
+        width: 35%;
+    }
+
+    .location-image{
+        height: unset;
+    }
+
+    .header-title--location{
+        margin-top: 2em;
+    }
+
+    .stories{
+        margin-bottom: 10em;
     }
 }
