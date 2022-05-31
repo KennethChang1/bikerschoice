@@ -201,6 +201,11 @@ body {
   margin-right: 1em;
 }
 
+.card__desc {
+  font-size: .9rem;
+  color: gray;
+}
+
 .product-title {
   margin-bottom: 10px;
   font-size: 25px;
