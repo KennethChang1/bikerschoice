@@ -4,17 +4,17 @@
 
 $header-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $text-font-family: 'Tenor Sans', sans-serif;
-$dim-bg-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) );
+$dim-bg-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) );
 
 body{
-    font-family: $text-font-family;
+    font-family: 'Roboto', sans-serif;
 }
 
-.no-scroll{
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-}
+// .no-scroll{
+//     position: relative;
+//     overflow: hidden;
+//     height: 100vh;
+// }
 
 .header{
     &__nav{
@@ -33,7 +33,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        background-image: url('../images/luca-j-jFz3oTdQN8E-unsplash.jpg');
+        background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('../images/luca-j-jFz3oTdQN8E-unsplash.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -51,11 +51,20 @@ body{
     &__copy{
         margin-bottom: 10px;
     }
+}
 
-    &__link{
-        border-bottom: 1px solid white;
-        width: fit-content;
-    }
+.btn-secondary{
+    border-bottom: 1px solid white;
+    width: fit-content;
+    padding-bottom: 3px;
+}
+
+.btn-primary{
+    font-weight: 300;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    color: black;
+    font-size: 13px;
 }
 
 .nav-links{
@@ -63,7 +72,7 @@ body{
     transform: translateX(-100%);
     top: 0;
     background-color: white;
-    width: 90%;
+    width: 100%;
     height: 100%;
     padding-top: 2em;
     padding-left: 18px;
@@ -72,6 +81,9 @@ body{
 
 .nav-links-active{
     transform: translateX(0);
+    // position: fixed;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .nav-link{
@@ -145,8 +157,9 @@ body{
     background-position: center;
     height: 500px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
     padding: 35px;
 }
 
@@ -166,13 +179,12 @@ body{
     background-image: $dim-bg-image, url('../images/assos.jpg');
 }
 
-.brand-title{
-    display: block;
-    text-align: center;
-}
-
 .brand-section{
     margin-bottom: 2em;
+}
+
+.brand-title{
+    display: block;
 }
 
 .header-title{
@@ -187,10 +199,14 @@ body{
     gap: 1em;
     overflow: scroll;
     margin-bottom: 2em;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
 }
 
 .article-item{
-    min-width: 18.75em;
+    min-width: 95%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .article-image{
@@ -201,13 +217,19 @@ body{
     border-radius: 8px;
 }
 
+.article-subtitle{
+    font-size: 13px;
+    margin-bottom: .5em;
+}
+
 .article-title{
     font-size: 1.2rem;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .article-copy{
     line-height: 1.3em;
+    font-size: 13px;
 }
 
 .location{

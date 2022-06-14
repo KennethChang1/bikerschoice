@@ -80,13 +80,7 @@ a {
 }
 
 body {
-  font-family: "Tenor Sans", sans-serif;
-}
-
-.no-scroll {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header__nav {
@@ -112,7 +106,8 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-image: url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/luca-j-jFz3oTdQN8E-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -131,11 +126,22 @@ body {
   margin-bottom: 10px;
 }
 
-.header__link {
+.btn-secondary {
   border-bottom: 1px solid white;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  padding-bottom: 3px;
+}
+
+.btn-primary {
+  font-weight: 300;
+  border-bottom: 1px solid black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+  font-size: 13px;
 }
 
 .nav-links {
@@ -144,7 +150,7 @@ body {
           transform: translateX(-100%);
   top: 0;
   background-color: white;
-  width: 90%;
+  width: 100%;
   height: 100%;
   padding-top: 2em;
   padding-left: 18px;
@@ -157,6 +163,8 @@ body {
 .nav-links-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .nav-link {
@@ -224,42 +232,43 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 5px;
   padding: 35px;
 }
 
 .bg-maap {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../images/maap jersey.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/maap jersey.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../images/maap jersey.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/maap jersey.jpg");
 }
 
 .bg-pns {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../images/pns.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/pns.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../images/pns.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/pns.jpg");
 }
 
 .bg-pedla {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../images/MM_MENSG_CONTENT1_640x.webp");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/MM_MENSG_CONTENT1_640x.webp");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../images/MM_MENSG_CONTENT1_640x.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/MM_MENSG_CONTENT1_640x.webp");
 }
 
 .bg-assos {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../images/assos.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/assos.jpg");
-}
-
-.brand-title {
-  display: block;
-  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../images/assos.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/assos.jpg");
 }
 
 .brand-section {
   margin-bottom: 2em;
+}
+
+.brand-title {
+  display: block;
 }
 
 .header-title {
@@ -276,10 +285,15 @@ body {
   gap: 1em;
   overflow: scroll;
   margin-bottom: 2em;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
 }
 
 .article-item {
-  min-width: 18.75em;
+  min-width: 95%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .article-image {
@@ -291,13 +305,19 @@ body {
   border-radius: 8px;
 }
 
+.article-subtitle {
+  font-size: 13px;
+  margin-bottom: .5em;
+}
+
 .article-title {
   font-size: 1.2rem;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 .article-copy {
   line-height: 1.3em;
+  font-size: 13px;
 }
 
 .location {
