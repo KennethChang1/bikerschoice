@@ -81,6 +81,7 @@ a {
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 .desktop-nav {
@@ -399,6 +400,9 @@ body {
     display: -ms-flexbox;
     display: flex;
     gap: 1rem;
+  }
+  .header-title-milestone {
+    padding: 3rem;
   }
   .desktop-navLinks {
     display: -webkit-box;
